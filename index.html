@@ -20,20 +20,149 @@
          crossorigin="anonymous"
       ></script>
       <title>Proyecto examen</title>
-      <ul>
-         <li>Proyecto 1</li>
-         <li>Proyecto 2</li>
-         <li>Proyecto 3</li>
-         <li>Proyecto 4</li>
-         <li>Proyecto 5</li>
-      </ul>
-      <div class="contenedor">
-         contenedorpadre
-         <div class="contenedor1 contenedor">contendor hijo 1</div>
-         <div class="contenedor2 contenedor">contendor hijo 1</div>
-      </div>
    </head>
    <body>
-      <h1>los docuemntos de nuestra carpeta</h1>
+      <!-- Sidebar -->
+      <section>
+         <div class="hamburger">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+         </div>
+         <div class="sidebar">
+            <ul class="sidebar-items">
+               <li class="item">Side bar item 1</li>
+               <li class="item">Side bar item 2</li>
+               <li class="item">Side bar item 3</li>
+               <li class="item">Side bar item 4</li>
+               <li class="item">Side bar item 5</li>
+            </ul>
+         </div>
+         <h1>los docuemntos de nuestra carpeta</h1>
+      </section>
+
+      <main>
+         <section>
+            <div>
+               <table class="table centrar-texto">
+                  <thead>
+                     <tr>
+                        <th><p>Longitud</p></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Valor a introducir</td>
+                        <td>Factor de conversion</td>
+                        <td>Resultado</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >Pulgadas</label
+                           >
+                        </td>
+                        <td><label for="">*25.4</label></td>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >milimetros</label
+                           >
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >Pies</label
+                           >
+                        </td>
+                        <td><label for="">*30.48</label></td>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >centimetros</label
+                           >
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td><p>Superficie</p></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >Pulgadas</label
+                           >
+                        </td>
+                        <td><label for="">*6.45</label></td>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >cm2</label
+                           >
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >Piel</label
+                           >
+                        </td>
+                        <td><label for="">*0.093</label></td>
+                        <td>
+                           <input type="number" name="" id="" /><label for=""
+                              >m2</label
+                           >
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+
+         <section class="ejercicio2">
+            <div>
+               <input type="button" value="+" />
+               <input type="button" value="-" />
+               <input type="button" value="*" />
+               <input type="button" value="/" />
+            </div>
+
+            <div>
+               <div>
+                  <label for=""> x </label>
+                  <input type="number" name="" id="" />
+               </div>
+               <div>
+                  <label for=""> y </label>
+                  <input type="number" name="" id="" />
+               </div>
+               <div>
+                  <label for=""> res </label>
+                  <input type="number" name="" id="" />
+               </div>
+            </div>
+         </section>
+
+         <section>
+            <div>
+               <label for="">numero 1</label>
+               <input type="number" />
+               <label for="">numero 2</label>
+               <input type="number" />
+               <input type="button" value="Calculo" />
+               <input type="text" name="" id="" placeholder="resultado" />
+            </div>
+         </section>
+
+         <section>
+            <div>
+               <label for="">Numero entero</label>
+               <input type="number" name="" id="" />
+               <input type="button" value="ejecutar" />
+               <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+         </section>
+      </main>
+
+      <h1>FUERA DEL SECTION</h1>
+      <script src="js/scrits.js"></script>
    </body>
 </html>

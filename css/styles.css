@@ -6,6 +6,7 @@
    --negro: #000000;
    --gris: #e1e1e1;
    --primario: #f56a6a;
+   --secundario: #272727;
 }
 
 /*===============ESTE CODIGO DEBE IR EN TODOS LOS PROYECTOS===============*/
@@ -16,7 +17,7 @@ html {
    font-size: 62.5%; /*1rem = 10px*/
 }
 
-/* ********** Elimina todos paddingy marginde los elementos que los tienen aplicados por defecto. Por ejemplo, <ul>. Hace que todos los pseudoelementos ( ::beforey ::after) hereden los de sus padres box-sizing, en lugar de usar siempre content-box. Esto determina si las propiedades como paddingse aplican hacia adentro (manteniendo el ancho del elemento) o hacia afuera (aumentando el ancho del elemento). ********** Este restablecimiento le brinda más flexibilidad que sus predecesores: puede usar content-boxo padding-box(cuando sea compatible) a voluntad, sin preocuparse de que un selector universal anule su CSS. Profundizamos más en esta técnica y el razonamiento ***********/
+/* ********** Elimina todos paddings y margin de los elementos que los tienen aplicados por defecto. Por ejemplo, <ul>. Hace que todos los pseudoelementos ( ::beforey ::after) hereden los de sus padres box-sizing, en lugar de usar siempre content-box. Esto determina si las propiedades como paddingse aplican hacia adentro (manteniendo el ancho del elemento) o hacia afuera (aumentando el ancho del elemento). ********** Este restablecimiento le brinda más flexibilidad que sus predecesores: puede usar content-boxo padding-box(cuando sea compatible) a voluntad, sin preocuparse de que un selector universal anule su CSS. Profundizamos más en esta técnica y el razonamiento ***********/
 *,
 *::before,
 *::after {
@@ -83,4 +84,113 @@ img {
 
 .contenedor {
    background-color: #f56a6a;
+}
+
+/*********************************SIDEBAR**********************************/
+
+section {
+   width: 100%;
+   height: 100vh;
+   background-color: var(--gris);
+}
+
+section h1 {
+   text-transform: uppercase;
+   color: #272727;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.hamburger {
+   position: absolute;
+   top: 2rem;
+   left: 2rem;
+   z-index: 9999;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+
+.hamburger .line {
+   display: block;
+   width: 3.2rem;
+   height: 0.2rem;
+   background-color: #272727;
+   transition: all 0.5s;
+}
+
+.hamburger .line2 {
+   margin: 0.8rem 0;
+}
+
+.sidebar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 30%;
+   height: 100%;
+   transform: translateX(-100%);
+   background-color: var(--secundario);
+   display: flex;
+   align-items: center;
+   transition: all 0.5s;
+   opacity: 0;
+}
+
+.sidebar-items {
+   list-style: none;
+}
+
+.sidebar .item {
+   display: inline-block;
+   width: 100%;
+   padding: 1rem 0 1rem 2rem;
+   font-size: 2.5rem;
+   color: #eee;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+
+.sidebar .item:hover {
+   background-color: #eee;
+   color: #272727;
+   transform: translateY(-1rem);
+}
+
+.sidebar .item:not(:last-child) {
+   margin-bottom: 4rem;
+}
+
+.hamburger.clicked {
+   left: calc(30% - 6rem);
+}
+.hamburger.clicked .line {
+   background-color: #eee;
+}
+.hamburger.clicked .line1 {
+   transform: translateY(1rem) rotate(-135deg);
+}
+
+.hamburger.clicked .line2 {
+   transform: rotate(135deg);
+   opacity: 0;
+}
+.hamburger.clicked .line3 {
+   transform: translateY(-1rem) rotate(135deg);
+}
+.sidebar.show {
+   transform: translateX(0);
+   opacity: 1;
+}
+
+/*********************************EJERCICIOS 1 *****************************/
+
+.table {
+   border: 0.1rem solid black;
+}
+
+td,
+tr {
+   border: 0.1rem solid black;
 }
